@@ -1,0 +1,13 @@
+.header {
+    grid-area: header;
+    background: #32CD32;
+    width: 100%;
+    
+}
+.header img {
+    width: 13%;
+    height: 100%;
+}
+.item {
+    cursor: grab;
+}

@@ -1,0 +1,39 @@
+.posts {
+    width: 80%;
+    min-height: 50%;
+}
+.posts textarea {
+width: 99%;
+height: 3em;
+resize: none;
+box-shadow: .2px .2px 2px;
+}
+button {
+    margin: right auto;
+    float: right;
+    margin-right: 0;
+    transition: ease-in all .05s;
+    box-shadow: 4px 4px 4px;
+    font-size: 0.8em;
+    border: 1px solid white;
+    border-radius: 2%;
+    cursor: pointer;
+    top: 0px;
+    outline: none;
+}
+button:hover {
+    border: 1px solid black;
+}
+button:focus {
+    outline: none;
+}
+button:active {
+    outline: none;
+    top:2px;
+    box-shadow: 1px 2px 4px;
+
+}
+textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+}

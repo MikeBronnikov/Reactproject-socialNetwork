@@ -1,0 +1,25 @@
+.wrapper {
+    height: 40%;
+    width: 29%;
+    overflow: hidden;
+    margin: 2%;
+}
+.wrapper img {
+    border-radius: 100%;
+    width: 2.8em;
+    height: 2.8em;
+}
+.online {
+    border-radius: 100%;
+    width: 2.8em;
+    height: 2.8em;
+    border: .14em solid rgb(5, 134, 46);  
+}
+.offline {
+    border-radius: 100%;
+    width: 2.8em;
+    height: 2.8em;
+}
+.wrapper p{
+    font-size: .8em;
+}

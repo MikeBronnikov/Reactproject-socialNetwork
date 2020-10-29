@@ -1,0 +1,17 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    grid-template-areas: "d w";
+    grid-gap: 5%;
+}
+p {
+    margin: 0;
+    font-size: 1.5em;
+}
+.dialogs {
+ grid-area: d;
+ border-right: 2px solid gray;
+}
+.chatwrapper{
+    overflow-y: scroll;
+}

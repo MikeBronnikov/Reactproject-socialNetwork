@@ -1,0 +1,24 @@
+.navbar {
+    grid-area: navbar;
+    background: #FF69B4;
+    font-size: 1.3em;
+
+}
+.active {
+    background: #BA55D3;
+}
+a {
+    color: black;
+    text-decoration: none
+  }
+nav {
+    display: flex;
+    flex-direction: column;
+}
+.item {
+    cursor: pointer;
+
+}
+.navbar .item:hover {
+    background: pink;
+}

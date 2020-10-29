@@ -1,0 +1,17 @@
+img {
+    height: 250px;
+    width: 250px;
+}
+.mainint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 33px;
+    text-shadow: 0px 2px 5px;
+}
+p {
+    text-align: center;
+}

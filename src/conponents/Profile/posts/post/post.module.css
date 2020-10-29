@@ -1,0 +1,39 @@
+.post {
+    width: 98%;
+    max-height: fit-content;
+    margin-top: 7%;
+}
+.imgAndContent {
+    display: flex;
+}
+.imgAndContent p{
+margin-left: 5%;
+border: 1px solid black
+}
+.post p{
+    width: 83%;
+    max-height: fit-content;
+    font-size: 1em;
+}
+
+.post img{
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 100%;
+    display: block;
+}
+.buttons {
+    display: flex;
+    float: right;
+}
+.buttons button {
+    margin: 1%;
+    min-width: fit-content;
+}
+.numOflikes{
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-size: 0.9em;
+    margin: 1%;
+}

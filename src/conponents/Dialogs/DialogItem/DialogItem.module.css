@@ -1,0 +1,19 @@
+.item ul {
+    padding: 0;
+   overflow: hidden; 
+    margin-top: 12%;
+    list-style-type: none;
+}
+.item li{
+    display: flex;
+    align-items: center;
+}
+
+.item .active {
+    background: green;
+}
+.item img {
+    width: 20%;
+    height: 20%;
+    padding: 5%;
+}
