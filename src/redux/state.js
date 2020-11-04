@@ -25,7 +25,6 @@ let store = {
             { id: 2, name: 'Lola', avatarSrc: 'https://yt3.ggpht.com/a/AATXAJxJkwo0-2wjdP6A3BWczaSxZcfEaed-Z7UPk1USGQ=s900-c-k-c0xffffffff-no-rj-mo' },
             { id: 3, name: 'Adrian', avatarSrc: 'https://montessoriself.ru/wp-content/uploads/2016/05/m17.jpg' }],
             messages: [
-
             ],
             messageTexting: ''
         },

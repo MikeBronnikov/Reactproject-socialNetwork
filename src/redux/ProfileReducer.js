@@ -1,6 +1,7 @@
 const profileReducer = (state, action) => {
     switch (action.type) {
-        case 'UPDATE-POST-TEXT': state.posttext = action.text;
+        case 'UPDATE-POST-TEXT': 
+        state.posttext = action.text;
             return state;
 
         case 'CREATE-POST-OBJECT':
