@@ -3,7 +3,8 @@ import styles from './MyFriends.module.css';
 import Friend from './Friend/Friend';
 
 const MyFrineds = (props) => {
-    let componentsfriend = props.friends.map((friend)=> 
+    debugger
+    let componentsfriend = props.friends.friends.map((friend)=> 
     <Friend name={friend.name} avatarSrc={friend.avatarSrc} friends={props.friends} index={friend.index}/>)
     return(
         <div className={styles.wrapper}>

@@ -28,7 +28,8 @@ let store = {
             ],
             messageTexting: ''
         },
-        friends: [{
+        sideBarPage: { 
+            friends: [{
             name: 'Skwidvard',
             avatarSrc: 'https://i.pinimg.com/736x/b7/61/b8/b761b89e7349e353c5330af6dbdc0ada.jpg',
             isOnline: true,
@@ -41,6 +42,7 @@ let store = {
             index : 1
         },
         ]
+    }
     },
     getState() {
         return this._state;
