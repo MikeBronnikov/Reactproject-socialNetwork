@@ -9,7 +9,7 @@ return (
 <div className={styles.bodyContent}>
 <ProfileInfo />
 <div>
-<PostsContainer store={props.store}/>
+<PostsContainer />
 </div>
 </div> )}
 export default Profile;

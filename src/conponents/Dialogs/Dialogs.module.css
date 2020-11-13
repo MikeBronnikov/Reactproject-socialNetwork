@@ -13,5 +13,7 @@ p {
  border-right: 2px solid gray;
 }
 .chatwrapper{
-    overflow-y: scroll;
+    border: 1px solid black;
+    max-height: 400px;
+    overflow-y: auto;
 }

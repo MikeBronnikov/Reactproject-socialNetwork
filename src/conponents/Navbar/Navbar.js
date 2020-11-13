@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import MyFrineds from './MyFrineds/MyFriends';
+import MyFriendscontainer from './MyFrineds/MyFriendscontainer';
 const Navbar = (props) => {
     return (
         <div className={styles.navbar}>
@@ -10,12 +11,13 @@ const Navbar = (props) => {
                 <NavLink to='/dialogs' className={styles.item} activeClassName={styles.active}>Сообщения</NavLink>
                 <NavLink to='/music' className={styles.item} activeClassName={styles.active}>Музыка</NavLink>
                 <NavLink to='/news' className={styles.item} activeClassName={styles.active}>Новости</NavLink>
+                <NavLink to='/users' className={styles.item} activeClassName={styles.active}>Пользователи</NavLink>
                 <br />
                 <div className={styles.item}>Настройки</div>
                 <br />
                 <br />
                 <br />
-            <MyFrineds friends={props.friends} />
+            <MyFriendscontainer />
             </nav>
         </div>
     )

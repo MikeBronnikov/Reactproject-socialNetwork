@@ -6,18 +6,20 @@ import Profile from '../src/conponents/Profile/Profile';
 import Header from '../src/conponents/Header/Header';
 import Dialogs from './conponents/Dialogs/Dialogs';
 import Music from './conponents/Music/Music';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import DialogsContainer from './conponents/Dialogs/DialogsContainer';
+import Users from './conponents/Users/Users';
 
 function App(props) {
-  debugger
+
   return (
 
       <div className="wrapper">
         <Header />
-        <Route path='/profile' render={()=><Profile store={props.store} />  }/>
-        <Route path='/dialogs'render={()=> <Dialogs dialogsData={props.state.dialogsPage} dispatch={props.dispatch} /> }/>
-        <Route path='/music' render={Music}/>
-        <Navbar friends={props.state.friends}/>
+        <Route path='/profile' render={()=><Profile />  }/>
+        <Route path='/dialogs'render={()=> <DialogsContainer /> }/>
+        <Route path='/users' render={()=><Users />}/>
+        <Navbar />
       </div>
 
   );

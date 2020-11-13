@@ -4,16 +4,17 @@ import DialogItem from './DialogItem/DialogItem';
 import styles from './Dialogs.module.css'
 import Message from './Message';
 import TextingArea from './TextingArea/TextingArea';
+import TextingAreaContainer from './TextingArea/TextingAreaContainer';
 
 
 const Dialogs = (props) => {
-    
-    let messagesData = props.dialogsData.messages.map((message)=>
+debugger
+    let messagesData = props.messages.map((message)=>
     <Message text={message.text} />)
-    let componentsData = props.dialogsData.dialogs.map((dialog)=>
+    let componentsData = props.dialogs.map((dialog)=>
      <DialogItem name={dialog.name} id={dialog.id} avatarSrc={dialog.avatarSrc} />) 
 
-     
+
   
     return (
         <div className={styles.wrapper}>
@@ -25,7 +26,7 @@ const Dialogs = (props) => {
             </div>
             <div className={styles.chatwrapper}>
             {messagesData}
-                <TextingArea messageTexting={props.dialogsData.messageTexting} dispatch = {props.dispatch}/>
+                <TextingAreaContainer />
             </div>
         </div>
     )

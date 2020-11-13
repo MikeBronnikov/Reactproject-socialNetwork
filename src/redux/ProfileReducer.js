@@ -17,20 +17,24 @@ let initialState = {
 }
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'UPDATE-POST-TEXT': 
-        state.posttext = action.text;
-            return state;
+        case 'UPDATE-POST-TEXT': {
+        let copyState = {...state};
+        copyState.posttext = {...state.posttext}
+        copyState.posttext = action.text;
+            return copyState; }
 
-        case 'CREATE-POST-OBJECT':
+        case 'CREATE-POST-OBJECT': {
             let post = {
                 id: 5,
                 text: state.posttext,
                 likesCount: 0,
                 avatarSrc: 'https://i.pinimg.com/736x/b7/61/b8/b761b89e7349e353c5330af6dbdc0ada.jpg'
             }
-            state.posts.push(post);
-            state.posttext = '';
-            return state;
+            let copystate = {...state};
+            copystate.posts = [...state.posts];
+            copystate.posts.push(post);
+            copystate.posttext = '';
+            return copystate; }
 
         default:
             return state

@@ -1,0 +1,9 @@
+.userWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+img{
+    height: 40px;
+    width: 40px;
+}
