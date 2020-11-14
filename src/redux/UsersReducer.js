@@ -1,6 +1,6 @@
-const FOLLOW = 'FOLLOW'
-const UNFOLLOW ='UNFOLLOW'
-const SET_USERS='SET_USERS'
+const FOLLOW = 'FOLLOW';
+const UNFOLLOW ='UNFOLLOW';
+const SET_USERS='SET_USERS';
 let initialState = {
     users: [{
         fullName: 'Dmitry X',
@@ -9,7 +9,17 @@ let initialState = {
         location: 'Moscow, Russia',
         AmIfollowed: false,
         avatarImg: 22,
-    }]
+    },
+    {
+        fullName: 'Dmitry X',
+        id: '1',
+        status: 'Всем здравстуйте! Ищу программиста в команду',
+        location: 'Moscow, Russia',
+        AmIfollowed: false,
+        avatarImg: 22,
+    },
+
+]
 
 }
 debugger
@@ -18,7 +28,7 @@ const UsersReducer = (state = initialState, action) => {
         case FOLLOW: {
            let copyState={...state};
             copyState.users = state.users.map((u)=>{
-                if (u.id==action.id){return {...u, AmIfollowed: true}
+                if (u.id===action.id){return {...u, AmIfollowed: true}
             }
                 return u
             });
@@ -26,7 +36,7 @@ const UsersReducer = (state = initialState, action) => {
         }
         case UNFOLLOW: {
             return {...state, users: state.users.map((u)=>{
-                if (u.id==action.id){return {...u, AmIfollowed: false}}
+                if (u.id===action.id){return {...u, AmIfollowed: false}}
                 else return u
             })}
         }
@@ -36,7 +46,7 @@ const UsersReducer = (state = initialState, action) => {
         
         default: return state
     }
-}
+};
 
 export const followAC = (userID) =>
     ({ type: FOLLOW, id: userID})

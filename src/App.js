@@ -9,6 +9,7 @@ import Music from './conponents/Music/Music';
 import { Route } from 'react-router-dom';
 import DialogsContainer from './conponents/Dialogs/DialogsContainer';
 import Users from './conponents/Users/Users';
+import UsersContainer from './conponents/Users/UsersContainer';
 
 function App(props) {
 
@@ -18,7 +19,7 @@ function App(props) {
         <Header />
         <Route path='/profile' render={()=><Profile />  }/>
         <Route path='/dialogs'render={()=> <DialogsContainer /> }/>
-        <Route path='/users' render={()=><Users />}/>
+        <Route path='/users' render={()=><UsersContainer />}/>
         <Navbar />
       </div>
 
