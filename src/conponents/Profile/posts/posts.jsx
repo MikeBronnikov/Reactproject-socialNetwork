@@ -16,7 +16,7 @@ const Posts = (props) => {
 
     return (
         <div className={styles.posts}>
-            <p>Мои посты</p>
+            <p>Мои посты!!!!!!!!!!!!</p>
             <textarea onChange={onPostChange} ref={newPostElement} name="" id="" cols="30" rows="10" value={props.posttext}></textarea>
 
             <button onClick={props.addpost}>Добавить на стену</button>
