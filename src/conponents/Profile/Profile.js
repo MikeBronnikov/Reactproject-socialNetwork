@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Profile.module.css'
-import Posts from './posts/Posts'
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import PostsContainer from './posts/PostsContainer';
 
