@@ -10,6 +10,7 @@ import { Route } from 'react-router-dom';
 import DialogsContainer from './conponents/Dialogs/DialogsContainer';
 import Users from './conponents/Users/Users';
 import UsersContainer from './conponents/Users/UsersContainer';
+import ProfileContainer from './conponents/Profile/ProfileContainer';
 
 function App(props) {
 
@@ -17,7 +18,7 @@ function App(props) {
 
       <div className="wrapper">
         <Header />
-        <Route path='/profile' render={()=><Profile />  }/>
+        <Route path='/profile/:id?' render={()=><ProfileContainer />  }/>
         <Route path='/dialogs'render={()=> <DialogsContainer /> }/>
         <Route path='/users' render={()=><UsersContainer />}/>
         <Navbar />

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ProfileInfo.module.css';
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
     return (
         <div>
             <div className={styles.headPic}>
@@ -10,7 +10,7 @@ const ProfileInfo = () => {
                 <div className={styles.avatar}><img src="https://look.com.ua/pic/201804/1400x1050/look.com.ua-278323.jpg" alt=""></img>
                 </div>
                 <div className={styles.descriptionWrapper}>
-                    <div className={styles.name}>Spongebob S.</div>
+                    <div className={styles.name}>{props.profile.fullName}</div>
                     <div className={styles.description}>I have a square pants and I love it!</div>
                 </div>
             </div>

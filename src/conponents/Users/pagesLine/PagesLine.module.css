@@ -1,0 +1,30 @@
+.wrapper{
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+.wrapper button {
+    display: inline-block;
+    float: none;
+}
+.pages a{
+    cursor: pointer;
+}
+.disapear{
+    display: none;
+    float: none;
+}
+.pages {
+    display: inline-block;
+    width: fit-content;
+    margin-left: 3%;
+    width: 290px;
+    text-align: center;
+}
+.active{
+font-weight: 900;
+};
+.pageItem{
+
+}

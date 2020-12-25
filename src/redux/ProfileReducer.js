@@ -1,3 +1,6 @@
+import { profileAPI } from "../api/api";
+
+const SET_PROFILE='SET_PROFILE'
 let initialState = {
     posts: [
         {
@@ -13,10 +16,14 @@ let initialState = {
             avatarSrc: 'https://pbs.twimg.com/media/CWN6WdbWEAAJw8h.jpg:large',
         },
     ],
+    profile: null,
     posttext: '',
 }
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
+        case SET_PROFILE:{
+            return {...state, profile:action.profile}
+        }
         case 'UPDATE-POST-TEXT': {
         let copyState = {...state};
         copyState.posttext = {...state.posttext}
@@ -42,9 +49,15 @@ const profileReducer = (state = initialState, action) => {
 
     }
 }
+export const getProfile=(id)=> async (dispatch)=>{
+let response = await profileAPI.getProfile(id)
+dispatch(setProfile(response.data))
+}
 export const addPostActionCreator = () =>
     ({ type: 'CREATE-POST-OBJECT' });
 
+export const setProfile =(profile)=>
+({type:SET_PROFILE, profile})
 export const updatePostTextActionCreator = (text) =>
     ({
         type: 'UPDATE-POST-TEXT',
