@@ -10,7 +10,8 @@ const Profile = (props) => {
     }
 return (
 <div className={styles.bodyContent}>
-<ProfileInfo profile={props.profile}/>
+<ProfileInfo isFetching ={props.isFetching} updateStatus={props.updateStatus} 
+status={props.status} profile={props.profile}/>
 <div>
 <PostsContainer userId={props.profile.userId} />
 </div>

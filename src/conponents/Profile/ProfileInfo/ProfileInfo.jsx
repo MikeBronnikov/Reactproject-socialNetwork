@@ -14,7 +14,7 @@ const ProfileInfo = (props) => {
                 </div>
                 <div className={styles.descriptionWrapper}>
                     <div className={styles.name}>{props.profile.fullName}</div>
-                    <Status />
+                    <Status  {...props}/>
                     <br/>
                     <div className={styles.description}><span className={styles.job}>{props.profile.lookingForAJob? '[Сейчас ищет работу]': '[Сейчас не ищет работу]'}</span></div>
                 </div>
