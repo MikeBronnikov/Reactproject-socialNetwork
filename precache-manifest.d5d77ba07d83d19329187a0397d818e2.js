@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dac0555b03d96cd96236c4cc800ea921",
+    "revision": "32286abe2caabce886d886c60120f6a8",
     "url": "/Reacrproject/index.html"
   },
   {
-    "revision": "f0c2f84adc8fa997c743",
+    "revision": "c50fb8a96c7405a918fd",
     "url": "/Reacrproject/static/css/main.ac823499.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Reacrproject/static/js/2.86987baa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f0c2f84adc8fa997c743",
-    "url": "/Reacrproject/static/js/main.60cbf8e2.chunk.js"
+    "revision": "c50fb8a96c7405a918fd",
+    "url": "/Reacrproject/static/js/main.32fd3803.chunk.js"
   },
   {
     "revision": "0525d55b9514301ffb1a74f1b5946a69",
-    "url": "/Reacrproject/static/js/main.60cbf8e2.chunk.js.LICENSE.txt"
+    "url": "/Reacrproject/static/js/main.32fd3803.chunk.js.LICENSE.txt"
   },
   {
     "revision": "5bcd6c5947d835913425",

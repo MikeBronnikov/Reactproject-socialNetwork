@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/Reacrproject/static/css/main.ac823499.chunk.css",
-    "main.js": "/Reacrproject/static/js/main.60cbf8e2.chunk.js",
-    "main.js.map": "/Reacrproject/static/js/main.60cbf8e2.chunk.js.map",
+    "main.js": "/Reacrproject/static/js/main.32fd3803.chunk.js",
+    "main.js.map": "/Reacrproject/static/js/main.32fd3803.chunk.js.map",
     "runtime-main.js": "/Reacrproject/static/js/runtime-main.b5ac847c.js",
     "runtime-main.js.map": "/Reacrproject/static/js/runtime-main.b5ac847c.js.map",
     "static/js/2.86987baa.chunk.js": "/Reacrproject/static/js/2.86987baa.chunk.js",
     "static/js/2.86987baa.chunk.js.map": "/Reacrproject/static/js/2.86987baa.chunk.js.map",
     "index.html": "/Reacrproject/index.html",
-    "precache-manifest.d001292aae8ab7309f3966c113eeda87.js": "/Reacrproject/precache-manifest.d001292aae8ab7309f3966c113eeda87.js",
+    "precache-manifest.d5d77ba07d83d19329187a0397d818e2.js": "/Reacrproject/precache-manifest.d5d77ba07d83d19329187a0397d818e2.js",
     "service-worker.js": "/Reacrproject/service-worker.js",
     "static/css/main.ac823499.chunk.css.map": "/Reacrproject/static/css/main.ac823499.chunk.css.map",
     "static/js/2.86987baa.chunk.js.LICENSE.txt": "/Reacrproject/static/js/2.86987baa.chunk.js.LICENSE.txt",
-    "static/js/main.60cbf8e2.chunk.js.LICENSE.txt": "/Reacrproject/static/js/main.60cbf8e2.chunk.js.LICENSE.txt",
+    "static/js/main.32fd3803.chunk.js.LICENSE.txt": "/Reacrproject/static/js/main.32fd3803.chunk.js.LICENSE.txt",
     "static/media/Dual Ring-1.9s-200px.svg": "/Reacrproject/static/media/Dual Ring-1.9s-200px.97a48eef.svg",
     "static/media/logo.svg": "/Reacrproject/static/media/logo.5d5d9eef.svg",
     "static/media/user.png": "/Reacrproject/static/media/user.b556e41a.png"
@@ -21,6 +21,6 @@
     "static/js/runtime-main.b5ac847c.js",
     "static/js/2.86987baa.chunk.js",
     "static/css/main.ac823499.chunk.css",
-    "static/js/main.60cbf8e2.chunk.js"
+    "static/js/main.32fd3803.chunk.js"
   ]
 }
