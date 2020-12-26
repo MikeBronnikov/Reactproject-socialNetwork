@@ -7,3 +7,16 @@ img{
     height: 40px;
     width: 40px;
 }
+.userWrapper button {
+    margin: right auto;
+    float: right;
+    margin-right: 0;
+    transition: ease-in all .05s;
+    box-shadow: 4px 4px 4px;
+    font-size: 0.8em;
+    border: 1px solid white;
+    border-radius: 2%;
+    cursor: pointer;
+    top: 0px;
+    outline: none;
+}

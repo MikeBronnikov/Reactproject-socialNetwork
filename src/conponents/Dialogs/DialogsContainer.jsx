@@ -1,21 +1,16 @@
 import { connect } from 'react-redux';
+import React from 'react'
+import { compose } from 'redux';
 import Dialogs from './Dialogs';
-//import {updateMessageTextActionCreator} from '../../../redux/dialogsReducer'
+import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 let mapStateToProps = (state) =>{
     return{
         dialogs: state.dialogsPage.dialogs,
         messages: state.dialogsPage.messages
-
     }
-    
-debugger
 }
-let mapDispatchToProps = (dispatch) =>{
-    return{
-    
-}
-}
+const DialogsContainer = props =>  <Dialogs {...props}/> 
 
-const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs)
-
-export default DialogsContainer;
+export default compose(
+    withAuthRedirect,
+    connect(mapStateToProps))(DialogsContainer) 

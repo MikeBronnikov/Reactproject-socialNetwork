@@ -11,3 +11,14 @@
 .item {
     cursor: grab;
 }
+.auth {
+    display: inline;
+    padding: 1em;
+    float: right;
+    margin-top: 2em;
+    text-align: center;
+    opacity: 0.5;
+}
+.auth:hover{
+    opacity: 1;
+}

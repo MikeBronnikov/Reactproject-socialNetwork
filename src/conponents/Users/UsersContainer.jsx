@@ -5,6 +5,7 @@ import { setFollow, setUnFollow, setCurrentPage, toggleFollowingProgress,
     getUsers} from '../../redux/UsersReducer'
 import Users from './Users'
 import Preloader from '../../common/Preloader'
+import { withAuthRedirect } from '../../hoc/withAuthRedirect'
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -43,7 +44,6 @@ class UsersContainer extends React.Component {
     }
 }*/
 let mapStateToProps = (state) => {
-   console.log('mapStateToProps USERS')
     return {
         users: state.usersPage.users,
         pageSize: state.usersPage.pageSize,

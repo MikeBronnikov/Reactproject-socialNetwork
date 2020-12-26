@@ -8,7 +8,6 @@ import TextingAreaContainer from './TextingArea/TextingAreaContainer';
 
 
 const Dialogs = (props) => {
-debugger
     let messagesData = props.messages.map((message)=>
     <Message text={message.text} />)
     let componentsData = props.dialogs.map((dialog)=>

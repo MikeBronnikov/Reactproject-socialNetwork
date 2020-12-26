@@ -1,0 +1,17 @@
+.wrapper{
+    text-align: center;
+    margin-top: 10%;
+}
+.head{
+    font-size: xx-large;
+    font-weight: 500;
+}
+.inputandlabel{
+
+}
+.btn{
+    margin-left: -3px;
+}
+.error{
+    color: red;
+}

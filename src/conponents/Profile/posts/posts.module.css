@@ -8,7 +8,7 @@ height: 3em;
 resize: none;
 box-shadow: .2px .2px 2px;
 }
-button {
+.posts button {
     margin: right auto;
     float: right;
     margin-right: 0;
@@ -36,4 +36,8 @@ button:active {
 textarea {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9em;
+}
+
+.error{
+    color: red;
 }

@@ -7,7 +7,7 @@ const Navbar = (props) => {
     return (
         <div className={styles.navbar}>
             <nav>
-                <NavLink to='/profile' className={styles.item} activeClassName={styles.active}>Мой профиль</NavLink>
+                <NavLink to={`/profile/${props.id}`} className={styles.item} activeClassName={styles.active}>Мой профиль</NavLink>
                 <NavLink to='/dialogs' className={styles.item} activeClassName={styles.active}>Сообщения</NavLink>
                 <NavLink to='/music' className={styles.item} activeClassName={styles.active}>Музыка</NavLink>
                 <NavLink to='/news' className={styles.item} activeClassName={styles.active}>Новости</NavLink>
