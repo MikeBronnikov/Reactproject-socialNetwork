@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fe567981998b837372319fa7f4c1733b",
+    "revision": "dac0555b03d96cd96236c4cc800ea921",
     "url": "/Reacrproject/index.html"
   },
   {
-    "revision": "90bd48004e39c2c76176",
+    "revision": "f0c2f84adc8fa997c743",
     "url": "/Reacrproject/static/css/main.ac823499.chunk.css"
   },
   {
-    "revision": "0d7c777b8de80e5cd413",
-    "url": "/Reacrproject/static/js/2.f72957ef.chunk.js"
+    "revision": "7a121b614089abec3edc",
+    "url": "/Reacrproject/static/js/2.86987baa.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Reacrproject/static/js/2.f72957ef.chunk.js.LICENSE.txt"
+    "url": "/Reacrproject/static/js/2.86987baa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "90bd48004e39c2c76176",
-    "url": "/Reacrproject/static/js/main.85a77b60.chunk.js"
+    "revision": "f0c2f84adc8fa997c743",
+    "url": "/Reacrproject/static/js/main.60cbf8e2.chunk.js"
   },
   {
     "revision": "0525d55b9514301ffb1a74f1b5946a69",
-    "url": "/Reacrproject/static/js/main.85a77b60.chunk.js.LICENSE.txt"
+    "url": "/Reacrproject/static/js/main.60cbf8e2.chunk.js.LICENSE.txt"
   },
   {
     "revision": "5bcd6c5947d835913425",
