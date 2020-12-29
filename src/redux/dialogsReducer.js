@@ -20,8 +20,7 @@ const dialogsReducer = (state= initialState, action) =>{
     copyState.messages=[...state.messages]//!
     copyState.messages.push(messageObject) 
     return copyState;}
-        default:
-            return state
+       default: return state
     }
 }
 export const updateMessageTextActionCreator = (text) => 

@@ -4,6 +4,7 @@ import userPhoto from '../assets/images/user.png'
 const SET_PROFILE='SET_PROFILE'
 const SET_STATUS='SET_STATUS'
 const SET_FETCHING='SET_FETCHING'
+const UPLOAD_SUCCEED = 'UPLOAD_SUCCEED'
 
 let initialState = {
     posts: [
@@ -35,6 +36,9 @@ const profileReducer = (state = initialState, action) => {
         case SET_FETCHING:{
             return{...state, isFetching: action.isFetching}
         }
+        case UPLOAD_SUCCEED: {
+            return {...state, profile: {...state.profile, photos: action.photos }}
+        }
 
         case 'CREATE-POST-OBJECT': {
             let post = {
@@ -57,24 +61,28 @@ const profileReducer = (state = initialState, action) => {
 //thunks creators
 export const getProfile=(id)=> async (dispatch)=>{
 dispatch(setFetching(true))
-debugger
 let response = await profileAPI.getProfile(id)
 dispatch(setFetching(false))
 dispatch(setProfile(response.data))
 }
 export const getStatus=(id)=> async (dispatch)=>{
     let response = await profileAPI.getStatus(id)
-    debugger
     dispatch(setStatusAC(response.data))
 }
 export const updateStatus=(status)=>async (dispatch)=>{
 dispatch(setFetching(true))
-debugger
 let response = await profileAPI.updateStatus(status);
-debugger
 dispatch(setFetching(false))
 if (response.data.resultCode==0){
 dispatch(setStatusAC(status))
+}
+}
+export const uploadAvatar = (photo)=> async (dispatch)=>{
+dispatch(setFetching(true));
+let response = await profileAPI.uploadAvatar(photo)
+dispatch(setFetching(false));
+if (response.data.resultCode === 0) {
+dispatch(uploadAvatarSucceed(response.data.data.photos))
 }
 }
 //actions creators
@@ -83,6 +91,8 @@ export const addPost = (text) =>
 
 export const setProfile =(profile)=>
 ({type:SET_PROFILE, profile})
+export const uploadAvatarSucceed =(photos)=>
+({type:UPLOAD_SUCCEED, photos})
 export const setFetching =(isFetching)=>
 ({type:SET_FETCHING, isFetching })
 export const setStatusAC = (status)=>

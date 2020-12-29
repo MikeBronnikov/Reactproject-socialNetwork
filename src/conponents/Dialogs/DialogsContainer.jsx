@@ -3,10 +3,11 @@ import React from 'react'
 import { compose } from 'redux';
 import Dialogs from './Dialogs';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
+import { getDialogs, getMessagesReselector } from '../../redux/DialogsSelectors';
 let mapStateToProps = (state) =>{
     return{
-        dialogs: state.dialogsPage.dialogs,
-        messages: state.dialogsPage.messages
+        dialogs: getDialogs(state),
+        messages: getMessagesReselector(state)
     }
 }
 const DialogsContainer = props =>  <Dialogs {...props}/> 

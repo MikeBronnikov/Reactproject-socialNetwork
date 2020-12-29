@@ -1,0 +1,17 @@
+
+.wrapper{
+    border: 1px dotted #000;
+    width: 650px;
+    height: 145px;
+    display: inline;
+    position: absolute;
+    background: white;
+    text-align: center;
+    transition: display 4s;
+}
+.input{
+    padding-top: 45px
+}
+.ffff{
+    background: red;
+}

@@ -13,7 +13,6 @@ const Status = (props) =>{
         seteditMode(false)}
     })
     const [editMode, seteditMode] = useState(false)
-    console.log(props)
     if (props.isFetching){return <Preloader />}
     return (
         <div className={styles.statusWrapper}>

@@ -1,27 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import { withAuthRedirect } from '../../hoc/withAuthRedirect'
-import {getProfile, getStatus, updateStatus} from '../../redux/ProfileReducer'
+import {getProfile, getStatus, updateStatus, uploadAvatar} from '../../redux/ProfileReducer'
 import Profile from './Profile'
 
+// let userId= this.props.match.params.id
+//         this.props.getProfile(userId);
+//         this.props.getStatus(userId);
 
-class ProfileContainer extends React.Component{
-    componentDidMount(){
-        let userId= this.props.match.params.id
-        this.props.getProfile(userId);
-        this.props.getStatus(userId);
-        this.props.getStatus(userId)
-    }
-render(){
+const ProfileContainer=(props)=>{
+let userId= props.match.params.id
+useEffect(() => {
+    props.getProfile(userId);
+    props.getStatus(userId)
+}, [userId,])
+
   return (  
   <div>
-        <Profile {...this.props} profile={this.props.profile}/>
+        <Profile {...props} />
     </div>
   )
 }
-}
+
 let mapStateToProps=(state)=>{
     return {
         profile: state.profilePage.profile,
@@ -33,5 +35,5 @@ let mapStateToProps=(state)=>{
 export default compose(
     withAuthRedirect,
     withRouter,
-    connect(mapStateToProps,{getProfile, getStatus, updateStatus})
+    connect(mapStateToProps,{getProfile, getStatus, updateStatus, uploadAvatar})
     )(ProfileContainer)
