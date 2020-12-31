@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import useOutsideClick from '../../../castomHooks/useOutsideClick';
+import useOutsideClick from '../../../../castomHooks/useOutsideClick';
 import styles from './modulPageLoading.module.css'
 
 const ModulPageLoading =(props)=>{

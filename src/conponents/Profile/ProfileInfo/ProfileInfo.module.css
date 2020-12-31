@@ -19,8 +19,16 @@ height: 9em;
     width: 100%;
 }
 .descriptionWrapper {
+    width: 100%;
     margin-left: 5%;
 }
 .job{
     font-style: italic;
+}
+.editbutton{
+    float: right;
+    opacity: 0.6;
+}
+.editbutton:hover{
+    opacity: 1;
 }

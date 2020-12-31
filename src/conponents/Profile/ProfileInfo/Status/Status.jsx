@@ -4,6 +4,7 @@ import Preloader from '../../../../common/Preloader'
 import styles from './status.module.css'
 
 const Status = (props) =>{
+    debugger
     const [status, setstatus] = useState(props.status)
     const formik = useFormik({
         initialValues: {
@@ -17,10 +18,11 @@ const Status = (props) =>{
     return (
         <div className={styles.statusWrapper}>
             
-            {editMode?<div><input name='status' onChange={formik.handleChange} 
+            {editMode
+            ?<div><input name='status' onChange={formik.handleChange} 
             onBlur={formik.handleSubmit} autoFocus={true} value={formik.values.status} /> 
-            <button onClick={()=>{seteditMode(false)}}>Не изменять</button></div>:<span onClick={()=>{seteditMode(true)}}> 
-            {props.status} </span>}
+            <button onClick={()=>{seteditMode(false)}}>Не изменять</button></div>
+            :<span className={styles.status} onClick={()=>{seteditMode(true)}}> {props.status} </span>}
         </div>
     )
 }

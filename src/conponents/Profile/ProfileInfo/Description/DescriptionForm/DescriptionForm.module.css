@@ -1,0 +1,8 @@
+.item{
+    margin: 8px;
+    width: 390px;
+}
+.item input {
+    float: right;
+    margin-top: 7px;
+}
