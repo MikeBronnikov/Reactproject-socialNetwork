@@ -24,7 +24,10 @@ const ProfileInfo = (props) => {
                 {discriptionEditMode
                 ?<button className={styles.editbutton} onClick={()=>{setdiscriptionEditMode(false)}}>Отменить изменения</button>
                 :<button className={styles.editbutton} onClick={()=>{setdiscriptionEditMode(true)}}>Изменить профиль</button>}
-                {discriptionEditMode?<DescriptionForm />: <Description status={props.status} profile={props.profile} />} 
+                {discriptionEditMode
+                ?<DescriptionForm setdiscriptionEditMode={setdiscriptionEditMode} 
+                setProfileInfo={props.setProfileInfo} profile={props.profile}/>
+                : <Description status={props.status} profile={props.profile} />} 
                 </div>
             </div>
         </div>

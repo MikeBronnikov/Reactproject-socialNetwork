@@ -1,8 +1,12 @@
 .item{
     margin: 8px;
-    width: 390px;
+    width: 490px;
 }
 .item input {
     float: right;
     margin-top: 7px;
+}
+.error{
+    opacity: 0.7;
+    color: red;
 }

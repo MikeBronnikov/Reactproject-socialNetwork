@@ -4,7 +4,6 @@ import Preloader from '../../../../common/Preloader'
 import styles from './status.module.css'
 
 const Status = (props) =>{
-    debugger
     const [status, setstatus] = useState(props.status)
     const formik = useFormik({
         initialValues: {

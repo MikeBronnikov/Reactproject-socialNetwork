@@ -4,8 +4,12 @@ import Login from "./Login";
 import {getLogin} from '../../redux/authReducer'
 
 
-const mapStateToProps = (state)=> ({isAuth: state.auth.isAuth,
-isFetching: state.auth.isFetching})
+const mapStateToProps = (state)=> ({
+isAuth: state.auth.isAuth,
+id: state.auth.id,
+isFetching: state.auth.isFetching,
+captchaURL: state.auth.captcha
+})
 
 const LoginContainer = props => <Login {...props} />
 

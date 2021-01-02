@@ -11,7 +11,7 @@ const Profile = (props) => {
 return (
 <div className={styles.bodyContent}>
 <ProfileInfo uploadAvatar={props.uploadAvatar} isFetching ={props.isFetching} updateStatus={props.updateStatus} 
-status={props.status} profile={props.profile}/>
+status={props.status} setProfileInfo={props.setProfileInfo} profile={props.profile}/>
 <div>
 <PostsContainer userId={props.profile.userId} />
 </div>

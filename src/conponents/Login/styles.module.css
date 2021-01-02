@@ -11,7 +11,12 @@
 }
 .btn{
     margin-left: -3px;
+    margin-top: 10px;
 }
 .error{
     color: red;
+}
+.captcha{
+    display: block;
+    margin: 0 auto;
 }

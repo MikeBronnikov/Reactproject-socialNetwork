@@ -5,6 +5,7 @@ const SET_PROFILE='SET_PROFILE'
 const SET_STATUS='SET_STATUS'
 const SET_FETCHING='SET_FETCHING'
 const UPLOAD_SUCCEED = 'UPLOAD_SUCCEED'
+const SET_PROFILE_INFO='SET_PROFILE_INFO'
 
 let initialState = {
     posts: [
@@ -52,6 +53,13 @@ const profileReducer = (state = initialState, action) => {
             copystate.posts.unshift(post);
             return copystate; }
 
+        case SET_PROFILE_INFO: {
+
+            return {...state, profile: {...state.profile, fullName: action.info.FullName, 
+            lookingForAJob: action.info.lookingForAJob, lookingForAJobDescription:action.info.LookingForAJobDescription,
+            AboutMe:action.info.AboutMe}}
+        }
+
         default:
             return state
 
@@ -64,6 +72,14 @@ dispatch(setFetching(true))
 let response = await profileAPI.getProfile(id)
 dispatch(setFetching(false))
 dispatch(setProfile(response.data))
+}
+export const setProfileInfo=(object)=> async (dispatch)=>{
+    debugger
+dispatch(setFetching(true))
+let response = await profileAPI.setProfileInfo(object)
+dispatch(setFetching(false))
+if (response.data.resultCode=== 0)
+dispatch(setProfileInfoAC(object))
 }
 export const getStatus=(id)=> async (dispatch)=>{
     let response = await profileAPI.getStatus(id)
@@ -91,6 +107,9 @@ export const addPost = (text) =>
 
 export const setProfile =(profile)=>
 ({type:SET_PROFILE, profile})
+export const setProfileInfoAC =(info)=>{
+console.log(info)
+return ({type:SET_PROFILE_INFO, info})}
 export const uploadAvatarSucceed =(photos)=>
 ({type:UPLOAD_SUCCEED, photos})
 export const setFetching =(isFetching)=>
