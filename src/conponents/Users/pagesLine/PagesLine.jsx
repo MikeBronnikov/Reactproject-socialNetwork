@@ -7,7 +7,7 @@ const PagesLine =(props)=>{
     let pagesCount = Math.ceil(props.totalItemsCount / props.pageSize);
     let portionCount = pagesCount / portionSize
     let pages = [];
-    let onPageClick = (page) =>{props.getUsers(page)}
+    let onPageClick = (page) =>{ props.getUsers(page, props.pageSize )}
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(<a className={i==props.currentPage? styles.active: styles.pageItem} onClick={()=>{onPageClick(i)}}>{i+' '}</a>);
         }

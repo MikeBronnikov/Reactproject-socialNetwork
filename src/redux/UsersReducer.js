@@ -7,6 +7,7 @@ const TOGGLE_IS_FOLLOWING_PROGRESS='TOGGLE_IS_FOLLOWING_PROGRESS';
 const TOGGLE_FETCHING='TOGGLE_FETCHING';
 const SET_CURRENT_PAGE='SET_CURRENT_PAGE';
 const SET_TOTAL_COUNT='SET_TOTAL_COUNT';
+const SET_PAGE_SIZE = 'UsersReducer/SET_PAGE_SIZE'
 
 let initialState = {
     users: [ ],
@@ -56,16 +57,17 @@ const UsersReducer = (state = initialState, action) => {
                     : state.followingInProgress.filter(id => id != action.userId)
             }
         }
+        case SET_PAGE_SIZE: {
+            return {...state, pageSize: action.size}
+        }
         
         default: return state
     }
 };
-export const toggleFetching = (isFetching) => 
-({type: TOGGLE_FETCHING, isFetching })
 
-export const getUsers = (page)=> async (dispatch)=>{
+export const getUsers = (page, size)=> async (dispatch)=>{
 dispatch(toggleFetching(true))
-let response = await usersAPI.getUsers(page)
+let response = await usersAPI.getUsers(page, size)
 dispatch(setUsers(response.items))
 dispatch(setTotalCount(response.totalCount))
 dispatch(setCurrentPage(page))
@@ -86,14 +88,19 @@ if (response.data.resultCode==0) {
     dispatch(unFollowSucceed(id))
 }
 }
+//action creators here 
 export const setCurrentPage = (currentPage=1) => 
 ({type: SET_CURRENT_PAGE, currentPage })
+export const setPageSize = (size) => 
+({type: SET_PAGE_SIZE, size })
 export const followSucceed = (userID) =>
     ({ type: FOLLOW, id: userID})
 export const unFollowSucceed = (userID) =>
     ({ type: UNFOLLOW, id: userID })
 export const setUsers = (users) =>
     ({type:SET_USERS, users})
+export const toggleFetching = (isFetching) => 
+({type: TOGGLE_FETCHING, isFetching })
 export const setTotalCount = (totalUsersCount) =>
     ({type:SET_TOTAL_COUNT, totalCount:totalUsersCount})
 export const toggleFollowingProgress = (isFetching, userId) => 

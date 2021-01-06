@@ -1,36 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {compose} from 'redux'
 import { connect } from 'react-redux'
 import { setFollow, setUnFollow, setCurrentPage, toggleFollowingProgress,
-    getUsers} from '../../redux/UsersReducer'
+    getUsers, setPageSize} from '../../redux/UsersReducer'
 import Users from './Users'
 import Preloader from '../../common/Preloader'
 import { withAuthRedirect } from '../../hoc/withAuthRedirect'
 
-class UsersContainer extends React.Component {
-    componentDidMount() {
-        this.props.getUsers();
-    }
+const UsersContainer =(props)=> {
+useEffect(() => {
+props.getUsers(props.pageNumber, props.pageSize);
+   
+}, [props.pageSize])
 
-    onPageChanged = (pageNumber) => {
-        this.props.getUsers(pageNumber, this.props.pageSize);
-    }
-
-    render() {
         return <div>
-            {this.props.isFetching &&<Preloader />}
-            <Users totalUsersCount={this.props.totalUsersCount}
-                        pageSize={this.props.pageSize}
-                        currentPage={this.props.currentPage}
-                        onPageChanged={this.onPageChanged}
-                        users={this.props.users}
-                        getUsers={this.props.getUsers}
-                        setFollow={this.props.setFollow}
-                        setUnFollow={this.props.setUnFollow}
-                        followingInProgress={this.props.followingInProgress}
+            {props.isFetching &&<Preloader />}
+            <Users {...props}
              />
         </div>
-    }
+    
 }
 
 /*let mapStateToProps = (state) => {
@@ -56,5 +44,5 @@ let mapStateToProps = (state) => {
 
 
 export default compose(
-    connect(mapStateToProps,{setFollow, setUnFollow, setCurrentPage, toggleFollowingProgress, getUsers })
+    connect(mapStateToProps,{setFollow, setUnFollow, setCurrentPage, toggleFollowingProgress, getUsers, setPageSize })
 )(UsersContainer)

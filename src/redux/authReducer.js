@@ -66,9 +66,7 @@ export const getLogin = (email, password, rememberMe, captcha) => async (dispatc
     }    //!!! нужно показать ошибку в самой форме
 }
 export const getLogout = () => async (dispatch) => {
-    debugger
     let response = await authAPI.logout();
-    debugger
     if (response.data.resultCode == 0) {
         dispatch(setAuthData(null, null, null, false))
     }

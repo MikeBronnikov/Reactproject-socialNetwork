@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from "./Users.module.css";
 import userPhoto from "../../assets/images/user.png";
 import {NavLink} from "react-router-dom";
 import PagesLine from './pagesLine/PagesLine';
+import SizeSelector from './sizeSelector/SizeSelector';
 
 let Users = (props) => {
 
 
-
-
-    return <div className={styles.usersWrapper
-    }>
+    return <div className={styles.usersWrapper}>
         <PagesLine getUsers={props.getUsers} totalItemsCount={props.totalUsersCount} 
         currentPage={props.currentPage} pageSize={props.pageSize}/>
         <div>
@@ -42,6 +40,7 @@ let Users = (props) => {
                 </span>
             </div>)
         }
+        <SizeSelector setPageSize={props.setPageSize} pageSize={props.pageSize}/>
     </div>
 }
 
