@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Contacts from '../Contacts/Contacts'
-import Status from '../Status/Status'
 import styles from './Description.module.css'
 
 

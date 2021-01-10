@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./DescriptionForm.module.css";
 
 const DescriptionForm = (props) => {
@@ -11,8 +11,8 @@ const DescriptionForm = (props) => {
   ];
   const contactArray = [
     { en: "Github", name: "contacts.github" },
-    { en: "Github", name: "contacts.github" },
-    {},
+    { en: "vk", name: "contacts.vk" },
+    { en: "instagram", name: "contacts.instagram" },
   ];
   let formik = useFormik({
     initialValues: {
@@ -20,6 +20,8 @@ const DescriptionForm = (props) => {
       LookingForAJobDescription: props.profile.lookingForAJobDescription,
       FullName: props.profile.fullName,
       AboutMe: props.profile.aboutMe,
+      Github: props.profile.contacts.github,
+      vk: props.profile.contacts.vk
     },
     onSubmit: (values) => {
       props.setProfileInfo(values);
@@ -43,7 +45,6 @@ const DescriptionForm = (props) => {
   return (
     <form >
       {discriptionArray.map((item) => {
-         
           return(
         <div className={styles.item}>
           <label htmlFor={item.en}>{item.ru}</label>{" "}
@@ -53,27 +54,17 @@ const DescriptionForm = (props) => {
          {formik.errors[item.en] && <span className={styles.error}>{formik.errors[item.en]}</span>}
         </div>
       )})}
+      {contactArray.map((item) => {
+          return(
+        <div className={styles.item}>
+          <label htmlFor={item.en}>{item.en}</label>{" "}
+          <input id={item.en} onChange={formik.handleChange} name={item.name} 
+          value={formik.values[item.en]} type='text'/>
+          <br/>
+         {formik.errors[item.en] && <span className={styles.error}>{formik.errors[item.en]}</span>}
+        </div>
+      )})}
 
-      <div className={styles.item}>
-        <label htmlFor="Github">Github</label>
-        <input
-          id="Github"
-          onChange={formik.handleChange}
-          name="contacts.github"
-          value={formik.values.github}
-          type="text"
-        />
-      </div>
-      <div className={styles.item}>
-        <label htmlFor="vk">vk</label>
-        <input
-          id="vk"
-          onChange={formik.handleChange}
-          name="contacts.vk"
-          value={formik.values.vk}
-          type="text"
-        />
-      </div>
       <button onClick={formik.handleSubmit}>Сохранить изменения профиля</button>
     </form>
   );

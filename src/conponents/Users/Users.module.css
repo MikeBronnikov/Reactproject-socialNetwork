@@ -2,14 +2,16 @@
     margin: right auto;
     float: right;
     margin-right: 0;
-    transition: ease-in all .05s;
-    box-shadow: 4px 4px 4px;
     font-size: 0.8em;
-    border: 1px solid white;
-    border-radius: 2%;
+    border: 1px solid black;
+    border-radius: 3px;
     cursor: pointer;
     top: 0px;
     outline: none;
+    padding: 2px;
+}
+.usersWrapper button:disabled{
+    background: darkgray;
 }
 .usersWrapper img {
     border-radius: 50%;
@@ -22,7 +24,7 @@
 }
 .eachUser button {
     width: 12%;
-    height: 19px;
+    height: 29px;
 }
 .username{
     font-size: x-large;

@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from "./Users.module.css";
 import userPhoto from "../../assets/images/user.png";
 import {NavLink} from "react-router-dom";
-import PagesLine from './pagesLine/PagesLine';
+import PagesLine from '../../common/pagesLine/PagesLine';
 import SizeSelector from './sizeSelector/SizeSelector';
+import FollowUnfollowBtns from '../../common/followUnfollowBtns/followUnfollowBtns';
 
 let Users = (props) => {
 
@@ -18,19 +19,21 @@ let Users = (props) => {
                 <span>
                     <div>
                        <NavLink to={'/profile/' + u.id}>
-                        <img src={u.photos.small != null ? u.photos.small : userPhoto}
+                        <img src={u.photos.small != null ? u.photos.small : userPhoto} alt='AVATAR'
                              className={styles.userPhoto}/>
                        </NavLink>
                     </div>
                     <div>
-                        {u.followed
+                        {/* {u.followed
                             ? <button disabled={props.followingInProgress
                                 .some(id => id === u.id)}
                                       onClick={() => { props.setUnFollow(u.id) }}>
                                 Unfollow</button>
                             : <button disabled={props.followingInProgress.some(id => id === u.id)}
                                       onClick={() => { props.setFollow(u.id) }}>
-                                      Follow</button>}
+                                      Follow</button>} */}
+                    <FollowUnfollowBtns followed ={u.followed} followingInProgress={props.followingInProgress} 
+                    setFollow={props.setFollow} setUnFollow={props.setUnFollow} id={u.id}/>
 
                     </div>
                 </span>

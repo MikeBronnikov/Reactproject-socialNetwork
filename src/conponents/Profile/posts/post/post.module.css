@@ -8,7 +8,8 @@
 }
 .imgAndContent p{
 margin-left: 5%;
-border: 1px solid black
+border: 1px solid black;
+border-radius: 10px;
 }
 .post p{
     width: 83%;

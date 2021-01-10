@@ -6,25 +6,29 @@ const SET_STATUS='SET_STATUS'
 const SET_FETCHING='SET_FETCHING'
 const UPLOAD_SUCCEED = 'UPLOAD_SUCCEED'
 const SET_PROFILE_INFO='SET_PROFILE_INFO'
+const SET_ERROR = 'ProfileReducer/SET_ERROR'
 
 let initialState = {
     posts: [
         {
             id: 1,
+            isAuthor: false,
             text: 'Lorem lor sit amet consece error obcaecati!',
             likesCount: 12,
             avatarSrc: 'https://i.pinimg.com/736x/b7/61/b8/b761b89e7349e353c5330af6dbdc0ada.jpg'
         },
         {
             id: 2,
+            isAuthor: false,
             text: 'Привет DГубка Бобчанский!',
             likesCount: 21,
             avatarSrc: 'https://pbs.twimg.com/media/CWN6WdbWEAAJw8h.jpg:large',
-        },
+        }
     ],
     profile: null,
     status: null,
-    isFetching: false
+    isFetching: false,
+    error: false
 }
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -59,6 +63,9 @@ const profileReducer = (state = initialState, action) => {
             lookingForAJob: action.info.lookingForAJob, lookingForAJobDescription:action.info.LookingForAJobDescription,
             AboutMe:action.info.AboutMe}}
         }
+        case SET_ERROR: {
+            return {...state, error: action.bolean}
+        }
 
         default:
             return state
@@ -86,11 +93,20 @@ export const getStatus=(id)=> async (dispatch)=>{
     dispatch(setStatusAC(response.data))
 }
 export const updateStatus=(status)=>async (dispatch)=>{
+     try {
 dispatch(setFetching(true))
 let response = await profileAPI.updateStatus(status);
 dispatch(setFetching(false))
-if (response.data.resultCode==0){
-dispatch(setStatusAC(status))
+if (response.data.resultCode===0){
+dispatch(setStatusAC(status))}
+} 
+    catch (error) {
+    dispatch(setFetching(false))
+    dispatch(setError(true))
+    setTimeout(() => {
+        dispatch(setError(false))
+    }, 5000);
+   
 }
 }
 export const uploadAvatar = (photo)=> async (dispatch)=>{
@@ -107,6 +123,8 @@ export const addPost = (text) =>
 
 export const setProfile =(profile)=>
 ({type:SET_PROFILE, profile})
+export const setError =(bolean)=>
+({type:SET_ERROR, bolean})
 export const setProfileInfoAC =(info)=>{
 console.log(info)
 return ({type:SET_PROFILE_INFO, info})}

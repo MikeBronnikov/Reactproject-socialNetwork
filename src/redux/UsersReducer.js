@@ -65,9 +65,9 @@ const UsersReducer = (state = initialState, action) => {
     }
 };
 
-export const getUsers = (page, size)=> async (dispatch)=>{
+export const getUsers = (page, size, isfriends)=> async (dispatch)=>{
 dispatch(toggleFetching(true))
-let response = await usersAPI.getUsers(page, size)
+let response = await usersAPI.getUsers(page, size, isfriends)
 dispatch(setUsers(response.items))
 dispatch(setTotalCount(response.totalCount))
 dispatch(setCurrentPage(page))

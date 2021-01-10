@@ -1,7 +1,6 @@
-import { connect, useFormik } from 'formik'
+import { useFormik } from 'formik'
 import React from 'react'
 import styles from './styles.module.css'
-import {getLogin} from '../../redux/authReducer'
 import Preloader from '../../common/Preloader'
 import { Redirect } from 'react-router-dom'
  

@@ -16,8 +16,8 @@ const Avatar = (props)=>{
 return(
     <div className={styles.avawrap}>
         { moduleWindow? <ModulPageLoading onInputChange={onInputChange} setmoduleWindow={setmoduleWindow}/>:''}
-                <div className={styles.avatar}><img title='Нажмите, чтобы изменить' onClick={()=>{onAvatarClick()}} 
-                src={props.profile.photos.large? props.profile.photos.large : userPhoto} alt=""></img> </div>
+                <div className={styles.avatar}><img title='Нажмите, чтобы изменить' alt='AVATAR' onClick={()=>{onAvatarClick()}} 
+                src={props.profile.photos.large? props.profile.photos.large : userPhoto} alt="avatar"></img> </div>
     </div>
 )
 }

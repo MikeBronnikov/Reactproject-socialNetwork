@@ -28,7 +28,7 @@ const Posts = (props) => {
 console.log(formik.errors)
   return (
     <div className={styles.posts}>
-      <p>{props.userId==props.autorizedUserId?'Мои посты':'Посты пользователя'}</p>
+      <p>{props.userId === props.autorizedUserId?'Мои посты':'Посты пользователя'}</p>
       <form action="">
       <textarea disabled={!props.userId}
         onChange={formik.handleChange}

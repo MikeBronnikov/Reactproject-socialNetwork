@@ -28,7 +28,9 @@ height: 9em;
 .editbutton{
     float: right;
     opacity: 0.6;
+    border: 1px solid black;
 }
 .editbutton:hover{
     opacity: 1;
+    border: 1px solid black;
 }

@@ -8,7 +8,7 @@ const DialogItem = (props) => {
             <div className={styles.item}>
                 <ul>
                     <li>
-                        <img src={props.avatarSrc}/>
+                        <img src={props.avatarSrc} alt='AVATAR'/>
                         {props.name}
                     </li>
                 </ul>

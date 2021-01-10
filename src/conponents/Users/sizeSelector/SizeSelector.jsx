@@ -13,17 +13,10 @@ const SizeSelector = (props) => {
     <Wrapper>
     <span>Показывать по </span>
     <select onChange={handleChange} size="1" >
-    {sizeVariety.map((num)=> <option value={num} selected={num==props.pageSize && 'selected'}>{num}</option>)}
+    {sizeVariety.map((num)=> <option value={num} selected={num === props.pageSize && 'selected'}>{num}</option>)}
     </select>
     </Wrapper>
   );
 };
 export default SizeSelector;
 
-
-
-
-
-{/* <option value="5" selected={props.pageSize == 5 && 'selected'}>5</option>
-<option value="10"selected={props.pageSize == 10 && 'selected'}>10</option>
-<option value="15"selected={props.pageSize == 15 && 'selected'}>15</option> */}

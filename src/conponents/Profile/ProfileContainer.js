@@ -26,6 +26,7 @@ useEffect(() => {
 
 let mapStateToProps=(state)=>{
     return {
+        error: state.profilePage.error,
         profile: state.profilePage.profile,
         status: state.profilePage.status,
         isFetching: state.profilePage.isFetching

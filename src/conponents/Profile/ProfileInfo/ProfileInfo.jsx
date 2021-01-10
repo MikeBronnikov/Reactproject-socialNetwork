@@ -17,7 +17,7 @@ const ProfileInfo = (props) => {
                 <img src="https://pbs.twimg.com/profile_banners/1028740017055838208/1534106006/1500x500" alt=""></img>
             </div>
             <div className={styles.infowrapper}>
-                <Avatar profile={props.profile}/>
+                <Avatar profile={props.profile} uploadAvatar={props.uploadAvatar}/>
                 <div className={styles.descriptionWrapper}>
                 <div className={styles.name}>{props.profile.fullName}</div> 
                 <Status  {...props}/>

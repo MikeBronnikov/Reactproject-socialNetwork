@@ -14,12 +14,12 @@ import NavbarContainer from './conponents/Navbar/NavbarContainer';
 import HeaderContainer from './conponents/Header/HeaderContainer';
 import LoginContainer from './conponents/Login/LoginContainer';
 import { withSuspense } from './hoc/withSuspense';
+import SubscriptionsContainer from './conponents/Subscriptions/SubscriptionsContainer';
 const UsersContainer = React.lazy(()=>import('./conponents/Users/UsersContainer'))
 
 function App(props) {
 useEffect(() => {
   props.initializeApp()
-  console.log(props)
 }, [props.id])
 
 if (props.isInitialized==false) {
@@ -33,11 +33,12 @@ if (props.isInitialized==false) {
         <NavbarContainer />
         <Switch>
         <Route path='/profile/:id?' render={()=><ProfileContainer />  }/>
+        <Route path='/subscriptions' render={()=><SubscriptionsContainer />  }/>
         <Route path='/dialogs'render={()=> <DialogsContainer /> }/>
         <Route path='/users' render={withSuspense(UsersContainer)}/>
         <Route path='/login' render={() => <LoginContainer />}/>
         
-        <Redirect from='/' to='/profile'/>
+        <Redirect from='/' to={`/profile/${props.id}`}/>
         </Switch>
       </div>
 
