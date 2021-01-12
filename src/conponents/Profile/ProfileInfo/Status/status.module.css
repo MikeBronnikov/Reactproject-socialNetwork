@@ -2,3 +2,6 @@
 cursor: pointer;
 font-weight: 800;
 }
+.statusWrapper{
+    margin-top: 10px;
+}

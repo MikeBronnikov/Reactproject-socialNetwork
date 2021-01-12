@@ -8,7 +8,8 @@ const mapStateToProps = (state)=> ({
 isAuth: state.auth.isAuth,
 id: state.auth.id,
 isFetching: state.auth.isFetching,
-captchaURL: state.auth.captcha
+captchaURL: state.auth.captcha,
+errorsDuringLogin: state.auth.errorsDuringLogin
 })
 
 const LoginContainer = props => <Login {...props} />

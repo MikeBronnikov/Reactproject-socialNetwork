@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components"
+const Wrapper = styled.div`
+text-align: center;
+padding-bottom: 15px;
+`
+
 const SizeSelector = (props) => {
-    const Wrapper = styled.div`
-    text-align: center;
-    padding-bottom: 15px;
-    `
+
     function handleChange(event){
         props.setPageSize(event.currentTarget.value)
     }
@@ -12,8 +14,8 @@ const SizeSelector = (props) => {
   return (
     <Wrapper>
     <span>Показывать по </span>
-    <select onChange={handleChange} size="1" >
-    {sizeVariety.map((num)=> <option value={num} selected={num === props.pageSize && 'selected'}>{num}</option>)}
+    <select onChange={handleChange} size="1" defaultValue={props.pageSize} >
+    {sizeVariety.map((num)=> <option key={num} value={num} >{num}</option>)}
     </select>
     </Wrapper>
   );

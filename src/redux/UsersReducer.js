@@ -33,7 +33,7 @@ const UsersReducer = (state = initialState, action) => {
         }
         case UNFOLLOW: {
             return {...state, users: state.users.map((u)=>{
-                if (u.id===action.id){return {...u, followed: false}}
+                if (u.id === action.id){return {...u, followed: false}}
                 else return u
             })}
         }
@@ -54,7 +54,7 @@ const UsersReducer = (state = initialState, action) => {
                 ...state,
                 followingInProgress: action.isFetching
                     ? [...state.followingInProgress, action.userId]
-                    : state.followingInProgress.filter(id => id != action.userId)
+                    : state.followingInProgress.filter(id => id !== action.userId)
             }
         }
         case SET_PAGE_SIZE: {
@@ -76,14 +76,14 @@ dispatch(toggleFetching(false))
 export const setFollow=(id)=>async (dispatch)=>{
 dispatch(toggleFollowingProgress(true, id));
 let response = await usersAPI.follow(id);
-if (response.data.resultCode==0) {
+if (response.data.resultCode === 0) {
     dispatch(toggleFollowingProgress(false, id))
     dispatch(followSucceed(id))
 }}
 export const setUnFollow=(id)=>async (dispatch)=>{
 dispatch(toggleFollowingProgress(true, id));
 let response = await usersAPI.unfollow(id);
-if (response.data.resultCode==0) {
+if (response.data.resultCode === 0) {
     dispatch(toggleFollowingProgress(false, id))
     dispatch(unFollowSucceed(id))
 }

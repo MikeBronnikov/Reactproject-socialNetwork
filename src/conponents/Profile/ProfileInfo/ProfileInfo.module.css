@@ -1,6 +1,9 @@
 .headPic {
     text-align: center;
 }
+.leftBlock{
+    width: 10px;
+    }
 .infowrapper {
     display: flex;
     }
@@ -26,6 +29,7 @@ height: 9em;
     font-style: italic;
 }
 .editbutton{
+    font-size: small;
     float: right;
     opacity: 0.6;
     border: 1px solid black;
@@ -33,4 +37,9 @@ height: 9em;
 .editbutton:hover{
     opacity: 1;
     border: 1px solid black;
+}
+.followbtn{
+    display: block;
+    width: 100px;
+    margin: 15px auto;
 }

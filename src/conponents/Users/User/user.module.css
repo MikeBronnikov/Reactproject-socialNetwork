@@ -20,3 +20,17 @@ img{
     top: 0px;
     outline: none;
 }
+.eachUser{
+    margin: 3%;
+    margin-bottom: 8%;
+}
+.eachUser button {
+    width: 12%;
+    float: right;
+    height: 29px;
+}
+.username{
+    font-size: x-large;
+    padding-left: 10px
+    ;
+}

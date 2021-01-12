@@ -1,13 +1,14 @@
 .avawrap{
-    width: 20%;
-height: 25%;
+    width: 155px;
+height: 147px;
 }
 .avatar  {
-    height: 20%;
+    height: 100%;
     width: 100%;
    
 }
 .avatar img {
     height: 100%;
     width: 100%;
+    border-radius: 15px;
 }

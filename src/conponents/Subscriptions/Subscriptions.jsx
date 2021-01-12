@@ -23,7 +23,6 @@ text-decoration: underline;
 `
 
 const Subscriptions = (props)=>{
-    console.log(props);
     if (props.isFetching) { return (
         <div><Preloader /></div>)}
     if (props.users === 0) { return (
@@ -32,7 +31,7 @@ const Subscriptions = (props)=>{
     
         return (
     <div>
-        {props.users.map((user)=><Sub setFollow={props.setFollow} setUnFollow={props.setUnFollow}
+        {props.users.map((user)=><Sub key={user.id} setFollow={props.setFollow} setUnFollow={props.setUnFollow}
         followingInProgress={props.followingInProgress} {...user}/>)}
         <PagesLine getUsers={props.getUsers} totalItemsCount={props.totalUsersCount} 
         currentPage={props.currentPage} pageSize={10} isfriend={true}/>

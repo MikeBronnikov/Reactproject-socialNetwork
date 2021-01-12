@@ -1,7 +1,6 @@
 import React from 'react'
 
 const FollowUnfollowBtns = (props) =>{
-    console.log(props);
     return (
         props.followed
         ?<button className={props.cn} disabled={props.followingInProgress.some(id => id === props.id)}

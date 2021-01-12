@@ -5,7 +5,7 @@ import { setFollow, setUnFollow, setCurrentPage, toggleFollowingProgress,
     getUsers, setPageSize} from '../../redux/UsersReducer'
 import Users from './Users'
 import Preloader from '../../common/Preloader'
-import { withAuthRedirect } from '../../hoc/withAuthRedirect'
+import { withErrorBoundary } from '../../hoc/wuthErrorBoundary'
 
 const UsersContainer =(props)=> {
 useEffect(() => {

@@ -44,6 +44,9 @@ export const profileAPI = {
         return instance.put('profile/photo', formData, {headers:{
             'Content-Type':'multipart/form-data'
         }})
+    },
+    getFollowInformation(id){
+        return instance.get('/follow/'+ id)
     }
 }
 

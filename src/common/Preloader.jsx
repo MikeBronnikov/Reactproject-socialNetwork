@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 const Preloader =()=>{
     return (
         <div className={styles.wrapper}>
-            <img src={preloader} />
+            <img src={preloader} alt='preloader'/>
         </div>
     )
 }

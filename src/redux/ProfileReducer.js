@@ -1,12 +1,15 @@
 import { profileAPI } from "../api/api";
 import userPhoto from '../assets/images/user.png'
 
-const SET_PROFILE='SET_PROFILE'
-const SET_STATUS='SET_STATUS'
-const SET_FETCHING='SET_FETCHING'
-const UPLOAD_SUCCEED = 'UPLOAD_SUCCEED'
-const SET_PROFILE_INFO='SET_PROFILE_INFO'
+const SET_PROFILE='ProfileReducer/SET_PROFILE'
+const SET_STATUS='ProfileReducer/SET_STATUS'
+const SET_FETCHING='ProfileReducer/SET_FETCHING'
+const UPLOAD_SUCCEED = 'ProfileReducer/UPLOAD_SUCCEED'
+const SET_PROFILE_INFO='ProfileReducer/SET_PROFILE_INFO'
 const SET_ERROR = 'ProfileReducer/SET_ERROR'
+const CREATE_POST_OBJECT = 'ProfileReducer/CREATE_POST_OBJECT'
+const DELETE_POST = 'ProfileReducer/DELETE_POST'
+const SET_FOLLOW_INFORMATION = 'ProfileReducer/SET_FOLLOW_INFORMATION'
 
 let initialState = {
     posts: [
@@ -28,7 +31,8 @@ let initialState = {
     profile: null,
     status: null,
     isFetching: false,
-    error: false
+    error: false,
+    isUserFollowed: null
 }
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -45,7 +49,7 @@ const profileReducer = (state = initialState, action) => {
             return {...state, profile: {...state.profile, photos: action.photos }}
         }
 
-        case 'CREATE-POST-OBJECT': {
+        case CREATE_POST_OBJECT: {
             let post = {
                 id: 5,
                 text: action.text,
@@ -56,6 +60,10 @@ const profileReducer = (state = initialState, action) => {
             copystate.posts = [...state.posts];
             copystate.posts.unshift(post);
             return copystate; }
+        
+        case DELETE_POST:{
+            return {...state, posts: state.posts.filter((item)=> item.id !== action.id && item)}
+        }
 
         case SET_PROFILE_INFO: {
 
@@ -65,6 +73,9 @@ const profileReducer = (state = initialState, action) => {
         }
         case SET_ERROR: {
             return {...state, error: action.bolean}
+        }
+        case SET_FOLLOW_INFORMATION: {
+            return {...state, isUserFollowed: action.boolean}
         }
 
         default:
@@ -91,6 +102,11 @@ dispatch(setProfileInfoAC(object))
 export const getStatus=(id)=> async (dispatch)=>{
     let response = await profileAPI.getStatus(id)
     dispatch(setStatusAC(response.data))
+}
+export const getFollowInformation=(id)=> async (dispatch)=>{
+    debugger
+    let response = await profileAPI.getFollowInformation(id);
+    dispatch(setFollowInformation(response.data))
 }
 export const updateStatus=(status)=>async (dispatch)=>{
      try {
@@ -119,10 +135,14 @@ dispatch(uploadAvatarSucceed(response.data.data.photos))
 }
 //actions creators
 export const addPost = (text) =>
-    ({ type: 'CREATE-POST-OBJECT',text });
+    ({ type: CREATE_POST_OBJECT ,text });
+export const deletePost = (id) =>
+    ({ type: DELETE_POST ,id });
 
 export const setProfile =(profile)=>
 ({type:SET_PROFILE, profile})
+export const setFollowInformation =(boolean)=>
+({type:SET_FOLLOW_INFORMATION, boolean})
 export const setError =(bolean)=>
 ({type:SET_ERROR, bolean})
 export const setProfileInfoAC =(info)=>{

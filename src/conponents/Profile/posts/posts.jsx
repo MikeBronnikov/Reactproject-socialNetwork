@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./posts.module.css";
-//import ReactDOM from 'react-dom';
 import Post from "./post/post";
 import { useFormik } from "formik";
 
-const Posts = (props) => {
+const Posts = React.memo((props) => {
   const formik = useFormik({
     initialValues: {postText: ''},
     onSubmit: (values)=>{props.addPost(values.postText)},
@@ -19,13 +18,13 @@ const Posts = (props) => {
   let componentsPostData = props.dataposts.map((post) => {
     return (
       <Post
+      key={post.id}
         avatarSrc={post.avatarSrc}
         text={post.text}
         numOflikes={post.likesCount}
       />
     );
   });
-console.log(formik.errors)
   return (
     <div className={styles.posts}>
       <p>{props.userId === props.autorizedUserId?'Мои посты':'Посты пользователя'}</p>
@@ -46,5 +45,5 @@ console.log(formik.errors)
       {componentsPostData}
     </div>
   );
-};
+});
 export default Posts;

@@ -2,14 +2,11 @@ import React from 'react';
 import './App.css';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import DialogsContainer from './conponents/Dialogs/DialogsContainer';
-import Users from './conponents/Users/Users';
-//import UsersContainer from './conponents/Users/UsersContainer';
 import ProfileContainer from './conponents/Profile/ProfileContainer';
 import { useEffect } from 'react';
 import { initializeApp } from './redux/appReducer';
 import { connect } from 'react-redux';
 import Preloader from './common/Preloader';
-import Login from './conponents/Login/Login';
 import NavbarContainer from './conponents/Navbar/NavbarContainer';
 import HeaderContainer from './conponents/Header/HeaderContainer';
 import LoginContainer from './conponents/Login/LoginContainer';
@@ -22,7 +19,7 @@ useEffect(() => {
   props.initializeApp()
 }, [props.id])
 
-if (props.isInitialized==false) {
+if (!props.isInitialized) {
   return <Preloader />
 }
   return (

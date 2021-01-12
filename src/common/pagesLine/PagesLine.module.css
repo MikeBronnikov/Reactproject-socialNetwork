@@ -8,6 +8,11 @@
     display: inline-block;
     float: none;
 }
+
+button:disabled{
+    color: rgb(154, 154, 154);
+    cursor: auto;
+}
 .pages span{
     cursor: pointer;
 }

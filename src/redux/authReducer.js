@@ -3,6 +3,7 @@ import { authAPI, securityAPI } from "../api/api"
 const SET_AUTH_DATA = 'authReducer/SET_AUTH_DATA'
 const SET_FETCHING = 'authReducer/SET_FETCHING'
 const SET_CAPTCHA='authReducer/SET_CAPTCHA'
+const SET_ERRORS_LOGIN = 'authReducer/SET_ERRORS_LOGIN'
 
 let initialState = {
     id: null,
@@ -10,7 +11,8 @@ let initialState = {
     email: null,
     isAuth: false,
     captcha: null,
-    isFetching: false
+    isFetching: false,
+    errorsDuringLogin:[]
 }
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -22,6 +24,9 @@ const authReducer = (state = initialState, action) => {
         }
         case SET_CAPTCHA: {
             return {...state, captcha: action.url}
+        }
+        case SET_ERRORS_LOGIN: {
+            return {...state, errorsDuringLogin: [...action.errors]}
         }
         default:
             return state
@@ -37,11 +42,13 @@ export const setFetching = (isFetching) => {
 export const setCaptcha = (url) => {
     return { type: SET_CAPTCHA, url }
 }
+export const errorsDuringLogin = (errors) => {
+    return { type: SET_ERRORS_LOGIN, errors }
+}
 
 //Thunks creators here
 export const getUserAuth = () => async (dispatch) => {
     let response = await authAPI.me();
-    console.log(response)
     if (response.data.resultCode === 0) {
         let { id, login, email } = response.data.data;
         dispatch(setAuthData(id, login, email, true))
@@ -61,13 +68,17 @@ export const getLogin = (email, password, rememberMe, captcha) => async (dispatc
     dispatch(setFetching(false));
     if (response.data.resultCode === 0) {
         dispatch(getUserAuth())
-    } else if (response.data.resultCode === 10) {
+    }
+     else if (response.data.resultCode === 10) {
     dispatch(getCapchaURL())
-    }    //!!! нужно показать ошибку в самой форме
+    }
+    if (response.data.resultCode === 1){
+        dispatch(errorsDuringLogin(response.data.messages))
+    }   
 }
 export const getLogout = () => async (dispatch) => {
     let response = await authAPI.logout();
-    if (response.data.resultCode == 0) {
+    if (response.data.resultCode === 0) {
         dispatch(setAuthData(null, null, null, false))
     }
 }
