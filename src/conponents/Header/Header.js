@@ -10,7 +10,7 @@ const Header = (props) => {
             <div className={styles.auth}>
 
             {props.isAuth?<div> <span>{`Вы авторизованы как ${props.login}`}</span>  <button onClick={()=>{props.getLogout()}}>{'Выйти'}</button> </div>
-            :<div> <span>{`Вы не авторизованы`}</span>  <button onClick={()=>{props.history.push('/login')}}>{'Войти'}</button> </div>}
+            :<div> <span>{`Вы не авторизованы!`}</span>  <button onClick={()=>{props.history.push('/login')}}>{'Войти'}</button> </div>}
            
 
             </div>
