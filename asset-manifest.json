@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/Reacrproject/static/css/main.6f4ab7ee.chunk.css",
-    "main.js": "/Reacrproject/static/js/main.7e96b492.chunk.js",
-    "main.js.map": "/Reacrproject/static/js/main.7e96b492.chunk.js.map",
-    "runtime-main.js": "/Reacrproject/static/js/runtime-main.d6b3bec8.js",
-    "runtime-main.js.map": "/Reacrproject/static/js/runtime-main.d6b3bec8.js.map",
-    "static/js/2.34260cbe.chunk.js": "/Reacrproject/static/js/2.34260cbe.chunk.js",
-    "static/js/2.34260cbe.chunk.js.map": "/Reacrproject/static/js/2.34260cbe.chunk.js.map",
-    "static/css/3.f4c661ce.chunk.css": "/Reacrproject/static/css/3.f4c661ce.chunk.css",
-    "static/js/3.0b8093f0.chunk.js": "/Reacrproject/static/js/3.0b8093f0.chunk.js",
-    "static/js/3.0b8093f0.chunk.js.map": "/Reacrproject/static/js/3.0b8093f0.chunk.js.map",
-    "index.html": "/Reacrproject/index.html",
-    "precache-manifest.273312d5602a8dd8dc4876fc7ef7e734.js": "/Reacrproject/precache-manifest.273312d5602a8dd8dc4876fc7ef7e734.js",
-    "service-worker.js": "/Reacrproject/service-worker.js",
-    "static/css/3.f4c661ce.chunk.css.map": "/Reacrproject/static/css/3.f4c661ce.chunk.css.map",
-    "static/css/main.6f4ab7ee.chunk.css.map": "/Reacrproject/static/css/main.6f4ab7ee.chunk.css.map",
-    "static/js/2.34260cbe.chunk.js.LICENSE.txt": "/Reacrproject/static/js/2.34260cbe.chunk.js.LICENSE.txt",
-    "static/js/main.7e96b492.chunk.js.LICENSE.txt": "/Reacrproject/static/js/main.7e96b492.chunk.js.LICENSE.txt",
-    "static/media/Dual Ring-1.9s-200px.svg": "/Reacrproject/static/media/Dual Ring-1.9s-200px.97a48eef.svg",
-    "static/media/logo.png": "/Reacrproject/static/media/logo.2f33ac50.png",
-    "static/media/user.png": "/Reacrproject/static/media/user.7fb75e87.png"
+    "main.css": "/Reactproject-socialNetwork/static/css/main.6f4ab7ee.chunk.css",
+    "main.js": "/Reactproject-socialNetwork/static/js/main.fb6a0cbf.chunk.js",
+    "main.js.map": "/Reactproject-socialNetwork/static/js/main.fb6a0cbf.chunk.js.map",
+    "runtime-main.js": "/Reactproject-socialNetwork/static/js/runtime-main.0730b1c6.js",
+    "runtime-main.js.map": "/Reactproject-socialNetwork/static/js/runtime-main.0730b1c6.js.map",
+    "static/js/2.7591f7c1.chunk.js": "/Reactproject-socialNetwork/static/js/2.7591f7c1.chunk.js",
+    "static/js/2.7591f7c1.chunk.js.map": "/Reactproject-socialNetwork/static/js/2.7591f7c1.chunk.js.map",
+    "static/css/3.f4c661ce.chunk.css": "/Reactproject-socialNetwork/static/css/3.f4c661ce.chunk.css",
+    "static/js/3.0b8093f0.chunk.js": "/Reactproject-socialNetwork/static/js/3.0b8093f0.chunk.js",
+    "static/js/3.0b8093f0.chunk.js.map": "/Reactproject-socialNetwork/static/js/3.0b8093f0.chunk.js.map",
+    "index.html": "/Reactproject-socialNetwork/index.html",
+    "precache-manifest.d0770418548d737654aa38d5834d0e09.js": "/Reactproject-socialNetwork/precache-manifest.d0770418548d737654aa38d5834d0e09.js",
+    "service-worker.js": "/Reactproject-socialNetwork/service-worker.js",
+    "static/css/3.f4c661ce.chunk.css.map": "/Reactproject-socialNetwork/static/css/3.f4c661ce.chunk.css.map",
+    "static/css/main.6f4ab7ee.chunk.css.map": "/Reactproject-socialNetwork/static/css/main.6f4ab7ee.chunk.css.map",
+    "static/js/2.7591f7c1.chunk.js.LICENSE.txt": "/Reactproject-socialNetwork/static/js/2.7591f7c1.chunk.js.LICENSE.txt",
+    "static/js/main.fb6a0cbf.chunk.js.LICENSE.txt": "/Reactproject-socialNetwork/static/js/main.fb6a0cbf.chunk.js.LICENSE.txt",
+    "static/media/Dual Ring-1.9s-200px.svg": "/Reactproject-socialNetwork/static/media/Dual Ring-1.9s-200px.97a48eef.svg",
+    "static/media/logo.png": "/Reactproject-socialNetwork/static/media/logo.2f33ac50.png",
+    "static/media/user.png": "/Reactproject-socialNetwork/static/media/user.7fb75e87.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d6b3bec8.js",
-    "static/js/2.34260cbe.chunk.js",
+    "static/js/runtime-main.0730b1c6.js",
+    "static/js/2.7591f7c1.chunk.js",
     "static/css/main.6f4ab7ee.chunk.css",
-    "static/js/main.7e96b492.chunk.js"
+    "static/js/main.fb6a0cbf.chunk.js"
   ]
 }
