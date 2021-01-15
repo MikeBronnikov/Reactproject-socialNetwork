@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "459cad3a326b18626480e4acac6c832f",
+    "revision": "c9bf7998f94e98d5fc6496d2d68cd344",
     "url": "/Reacrproject/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Reacrproject/static/css/3.f4c661ce.chunk.css"
   },
   {
-    "revision": "08d22a1b1a73f2c7adfa",
+    "revision": "21a5f9e5bd95a16cc157",
     "url": "/Reacrproject/static/css/main.6f4ab7ee.chunk.css"
   },
   {
@@ -24,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Reacrproject/static/js/3.0b8093f0.chunk.js"
   },
   {
-    "revision": "08d22a1b1a73f2c7adfa",
-    "url": "/Reacrproject/static/js/main.394d1267.chunk.js"
+    "revision": "21a5f9e5bd95a16cc157",
+    "url": "/Reacrproject/static/js/main.7e96b492.chunk.js"
   },
   {
     "revision": "0525d55b9514301ffb1a74f1b5946a69",
-    "url": "/Reacrproject/static/js/main.394d1267.chunk.js.LICENSE.txt"
+    "url": "/Reacrproject/static/js/main.7e96b492.chunk.js.LICENSE.txt"
   },
   {
     "revision": "9cbb7fd98851aba93986",
