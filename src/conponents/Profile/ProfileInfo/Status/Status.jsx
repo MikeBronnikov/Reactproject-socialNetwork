@@ -21,7 +21,7 @@ const Status = (props) =>{
             ?<div><input name='status' onChange={formik.handleChange} 
             onBlur={formik.handleSubmit} autoFocus={true} value={formik.values.status} /> 
             <button onClick={()=>{seteditMode(false)}}>Не изменять</button></div>
-            :<span className={styles.status} onClick={()=>{seteditMode(true)}}> {props.status} </span>}
+            :<span className={styles.status} onClick={()=>{seteditMode(true)}}> Статус: {props.status} </span>}
         </div>
     )
 }

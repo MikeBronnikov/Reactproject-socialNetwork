@@ -4,6 +4,8 @@ import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import { withAuthRedirect } from '../../hoc/withAuthRedirect'
 import {getProfile, getStatus, updateStatus, uploadAvatar, setProfileInfo, getFollowInformation} from '../../redux/ProfileReducer'
+import { getErrorSelector, getProfileSelector, getAuthUserIDSelector, getIsUserFollowedSelector,
+    getUsersSelector, getStatusSelector, getisFetchingSelector, getFollowingInProgressSelector } from '../../redux/ProfileSelectors'
 import {setUnFollow, setFollow} from '../../redux/UsersReducer'
 import Profile from './Profile'
 
@@ -32,14 +34,14 @@ useEffect(() => {
 
 let mapStateToProps=(state)=>{
     return {
-        error: state.profilePage.error,
-        profile: state.profilePage.profile,
-        status: state.profilePage.status,
-        isFetching: state.profilePage.isFetching,
-        authUserID: state.auth.id,
-        isUserFollowed: state.profilePage.isUserFollowed,
-        followingInProgress: state.usersPage.followingInProgress,
-        users:state.usersPage.users
+        error: getErrorSelector(state),
+        profile: getProfileSelector(state),
+        status: getStatusSelector(state),
+        isFetching: getisFetchingSelector(state),
+        authUserID: getAuthUserIDSelector(state) ,
+        isUserFollowed: getIsUserFollowedSelector(state),
+        followingInProgress: getFollowingInProgressSelector(state),
+        users:getUsersSelector(state)
     }
 }
 

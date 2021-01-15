@@ -1,12 +1,13 @@
 .item ul {
     padding: 0;
    overflow: hidden; 
-    margin-top: 12%;
+    margin-top: 2%;
     list-style-type: none;
 }
 .item li{
     display: flex;
     align-items: center;
+    width: 300px;
 }
 
 .item .active {

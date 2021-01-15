@@ -1,6 +1,8 @@
 .wrapper{
     text-align: left;
-    position: absolute;
+    position: sticky;
+    margin-left: auto;
+    background: white;
     width: 300px;
     height: 120px;
     border: 2px solid red;

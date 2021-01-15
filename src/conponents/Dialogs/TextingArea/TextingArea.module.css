@@ -1,17 +1,17 @@
 .wrapper{
-    width: 100%;
+    margin-top: 15px;
+    width: 108%;
     height: 100%;
 }
 .dialogWindow {
     grid-area: w;
-    position: relative;
 }
 .writtingItems{
     bottom: 0;
-    position: absolute;
     display: flex;
     height: 15%;
-    width: 32%;
+    width: 92%;
+    padding-left: 100;
 
 }
 .textarea{

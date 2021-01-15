@@ -69,7 +69,7 @@ const profileReducer = (state = initialState, action) => {
 
             return {...state, profile: {...state.profile, fullName: action.info.FullName, 
             lookingForAJob: action.info.lookingForAJob, lookingForAJobDescription:action.info.LookingForAJobDescription,
-            AboutMe:action.info.AboutMe}}
+            aboutMe: action.info.AboutMe}}
         }
         case SET_ERROR: {
             return {...state, error: action.bolean}

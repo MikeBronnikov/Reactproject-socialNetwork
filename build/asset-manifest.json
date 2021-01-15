@@ -1,26 +1,30 @@
 {
   "files": {
-    "main.css": "/Reacrproject/static/css/main.ac823499.chunk.css",
-    "main.js": "/Reacrproject/static/js/main.32fd3803.chunk.js",
-    "main.js.map": "/Reacrproject/static/js/main.32fd3803.chunk.js.map",
-    "runtime-main.js": "/Reacrproject/static/js/runtime-main.b5ac847c.js",
-    "runtime-main.js.map": "/Reacrproject/static/js/runtime-main.b5ac847c.js.map",
-    "static/js/2.86987baa.chunk.js": "/Reacrproject/static/js/2.86987baa.chunk.js",
-    "static/js/2.86987baa.chunk.js.map": "/Reacrproject/static/js/2.86987baa.chunk.js.map",
+    "main.css": "/Reacrproject/static/css/main.6f4ab7ee.chunk.css",
+    "main.js": "/Reacrproject/static/js/main.394d1267.chunk.js",
+    "main.js.map": "/Reacrproject/static/js/main.394d1267.chunk.js.map",
+    "runtime-main.js": "/Reacrproject/static/js/runtime-main.d6b3bec8.js",
+    "runtime-main.js.map": "/Reacrproject/static/js/runtime-main.d6b3bec8.js.map",
+    "static/js/2.34260cbe.chunk.js": "/Reacrproject/static/js/2.34260cbe.chunk.js",
+    "static/js/2.34260cbe.chunk.js.map": "/Reacrproject/static/js/2.34260cbe.chunk.js.map",
+    "static/css/3.f4c661ce.chunk.css": "/Reacrproject/static/css/3.f4c661ce.chunk.css",
+    "static/js/3.0b8093f0.chunk.js": "/Reacrproject/static/js/3.0b8093f0.chunk.js",
+    "static/js/3.0b8093f0.chunk.js.map": "/Reacrproject/static/js/3.0b8093f0.chunk.js.map",
     "index.html": "/Reacrproject/index.html",
-    "precache-manifest.d5d77ba07d83d19329187a0397d818e2.js": "/Reacrproject/precache-manifest.d5d77ba07d83d19329187a0397d818e2.js",
+    "precache-manifest.23bd751ca79b606d4ff4afd2e1d80b3e.js": "/Reacrproject/precache-manifest.23bd751ca79b606d4ff4afd2e1d80b3e.js",
     "service-worker.js": "/Reacrproject/service-worker.js",
-    "static/css/main.ac823499.chunk.css.map": "/Reacrproject/static/css/main.ac823499.chunk.css.map",
-    "static/js/2.86987baa.chunk.js.LICENSE.txt": "/Reacrproject/static/js/2.86987baa.chunk.js.LICENSE.txt",
-    "static/js/main.32fd3803.chunk.js.LICENSE.txt": "/Reacrproject/static/js/main.32fd3803.chunk.js.LICENSE.txt",
+    "static/css/3.f4c661ce.chunk.css.map": "/Reacrproject/static/css/3.f4c661ce.chunk.css.map",
+    "static/css/main.6f4ab7ee.chunk.css.map": "/Reacrproject/static/css/main.6f4ab7ee.chunk.css.map",
+    "static/js/2.34260cbe.chunk.js.LICENSE.txt": "/Reacrproject/static/js/2.34260cbe.chunk.js.LICENSE.txt",
+    "static/js/main.394d1267.chunk.js.LICENSE.txt": "/Reacrproject/static/js/main.394d1267.chunk.js.LICENSE.txt",
     "static/media/Dual Ring-1.9s-200px.svg": "/Reacrproject/static/media/Dual Ring-1.9s-200px.97a48eef.svg",
-    "static/media/logo.svg": "/Reacrproject/static/media/logo.5d5d9eef.svg",
-    "static/media/user.png": "/Reacrproject/static/media/user.b556e41a.png"
+    "static/media/logo.png": "/Reacrproject/static/media/logo.2f33ac50.png",
+    "static/media/user.png": "/Reacrproject/static/media/user.7fb75e87.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5ac847c.js",
-    "static/js/2.86987baa.chunk.js",
-    "static/css/main.ac823499.chunk.css",
-    "static/js/main.32fd3803.chunk.js"
+    "static/js/runtime-main.d6b3bec8.js",
+    "static/js/2.34260cbe.chunk.js",
+    "static/css/main.6f4ab7ee.chunk.css",
+    "static/js/main.394d1267.chunk.js"
   ]
 }

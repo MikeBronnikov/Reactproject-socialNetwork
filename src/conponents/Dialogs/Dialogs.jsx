@@ -17,13 +17,16 @@ const Dialogs = (props) => {
                 <p>Диалоги</p>
                 
                 {componentsData}
-                
+
             </div>
+            <div>
             <div className={styles.chatwrapper}>
-            {messagesData}
-                <TextingAreaContainer />
+            {messagesData} 
+           
             </div>
-        </div>
+            <TextingAreaContainer />
+            </div>
+            </div>
     )
 }
 export default Dialogs;

@@ -1,9 +1,9 @@
 .wrapper{
+    display: block;
     margin: 1%;
     width: 70%;
-    max-width: 70%;
-    float: right;
-    border: 1px solid black;
+    max-width: fit-content;
     word-wrap: normal;
     padding-right: 2%;
+    margin-left: auto;
 }

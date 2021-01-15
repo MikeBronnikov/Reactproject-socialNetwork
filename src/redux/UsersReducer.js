@@ -1,13 +1,14 @@
 import { usersAPI } from "../api/api";
 
-const FOLLOW = 'FOLLOW';
-const UNFOLLOW ='UNFOLLOW';
-const SET_USERS='SET_USERS';
-const TOGGLE_IS_FOLLOWING_PROGRESS='TOGGLE_IS_FOLLOWING_PROGRESS';
-const TOGGLE_FETCHING='TOGGLE_FETCHING';
-const SET_CURRENT_PAGE='SET_CURRENT_PAGE';
-const SET_TOTAL_COUNT='SET_TOTAL_COUNT';
+const FOLLOW = 'UsersReducer/FOLLOW';
+const UNFOLLOW ='UsersReducer/UNFOLLOW';
+const SET_USERS='UsersReducer/SET_USERS';
+const TOGGLE_IS_FOLLOWING_PROGRESS='UsersReducer/TOGGLE_IS_FOLLOWING_PROGRESS';
+const TOGGLE_FETCHING='UsersReducer/TOGGLE_FETCHING';
+const SET_CURRENT_PAGE='UsersReducer/SET_CURRENT_PAGE';
+const SET_TOTAL_COUNT='UsersReducer/SET_TOTAL_COUNT';
 const SET_PAGE_SIZE = 'UsersReducer/SET_PAGE_SIZE'
+const SET_ERROR ='UsersReducer/SET_ERROR'
 
 let initialState = {
     users: [ ],
@@ -16,6 +17,8 @@ let initialState = {
     currentPage: 1,
     isFetching: false,
     followingInProgress: [],
+    error: false
+
 };
 
 
@@ -46,6 +49,9 @@ const UsersReducer = (state = initialState, action) => {
         case SET_CURRENT_PAGE: {
             return {...state, currentPage: action.currentPage}
         }
+        case SET_ERROR: {
+            return {...state, error: action.bolean}
+        }
         case TOGGLE_FETCHING: {
             return {...state, isFetching: action.isFetching}
         }
@@ -74,20 +80,34 @@ dispatch(setCurrentPage(page))
 dispatch(toggleFetching(false))
 }
 export const setFollow=(id)=>async (dispatch)=>{
+    try{
 dispatch(toggleFollowingProgress(true, id));
 let response = await usersAPI.follow(id);
 if (response.data.resultCode === 0) {
     dispatch(toggleFollowingProgress(false, id))
     dispatch(followSucceed(id))
-}}
-export const setUnFollow=(id)=>async (dispatch)=>{
+}} catch{
+      dispatch(toggleFollowingProgress(false, id))
+      dispatch(setError(true))
+      setTimeout(() => {
+      dispatch(setError(false)) 
+      }, 5000);
+    }
+}
+export const setUnFollow=(id)=>async (dispatch)=>{ try{
 dispatch(toggleFollowingProgress(true, id));
 let response = await usersAPI.unfollow(id);
 if (response.data.resultCode === 0) {
     dispatch(toggleFollowingProgress(false, id))
     dispatch(unFollowSucceed(id))
 }
-}
+} catch{
+    dispatch(toggleFollowingProgress(false, id))
+    dispatch(setError(true))
+    setTimeout(() => {
+    dispatch(setError(false)) 
+    }, 5000);
+  }}
 //action creators here 
 export const setCurrentPage = (currentPage=1) => 
 ({type: SET_CURRENT_PAGE, currentPage })
@@ -97,6 +117,8 @@ export const followSucceed = (userID) =>
     ({ type: FOLLOW, id: userID})
 export const unFollowSucceed = (userID) =>
     ({ type: UNFOLLOW, id: userID })
+export const setError =(bolean)=>
+({type:SET_ERROR, bolean})
 export const setUsers = (users) =>
     ({type:SET_USERS, users})
 export const toggleFetching = (isFetching) => 
