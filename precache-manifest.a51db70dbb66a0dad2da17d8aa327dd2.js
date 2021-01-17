@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "28176b3d1bf3e420bbba596cf4aaa789",
+    "revision": "62fbce94f1d8cf925a87f1df4a24a070",
     "url": "/Reactproject-socialNetwork/index.html"
   },
   {
-    "revision": "7dc8d29f1059367bff11",
+    "revision": "04da82fa338d24efff81",
     "url": "/Reactproject-socialNetwork/static/css/3.f4c661ce.chunk.css"
   },
   {
-    "revision": "c5a3116d3253db28c70b",
+    "revision": "8487e83ca18a370abc17",
     "url": "/Reactproject-socialNetwork/static/css/main.b0accf3a.chunk.css"
   },
   {
-    "revision": "dd13f4931e863c56b6f5",
-    "url": "/Reactproject-socialNetwork/static/js/2.9bdbdf26.chunk.js"
+    "revision": "f6a2ca804a6b7bd6a164",
+    "url": "/Reactproject-socialNetwork/static/js/2.6849568d.chunk.js"
   },
   {
     "revision": "e1f5ad522e1b15731a197887d22f1a58",
-    "url": "/Reactproject-socialNetwork/static/js/2.9bdbdf26.chunk.js.LICENSE.txt"
+    "url": "/Reactproject-socialNetwork/static/js/2.6849568d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7dc8d29f1059367bff11",
-    "url": "/Reactproject-socialNetwork/static/js/3.ce16ac60.chunk.js"
+    "revision": "04da82fa338d24efff81",
+    "url": "/Reactproject-socialNetwork/static/js/3.097c7e58.chunk.js"
   },
   {
-    "revision": "c5a3116d3253db28c70b",
-    "url": "/Reactproject-socialNetwork/static/js/main.7fe8febc.chunk.js"
+    "revision": "8487e83ca18a370abc17",
+    "url": "/Reactproject-socialNetwork/static/js/main.1520c94e.chunk.js"
   },
   {
     "revision": "0525d55b9514301ffb1a74f1b5946a69",
-    "url": "/Reactproject-socialNetwork/static/js/main.7fe8febc.chunk.js.LICENSE.txt"
+    "url": "/Reactproject-socialNetwork/static/js/main.1520c94e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "960eb88d118e81bf6fc0",
-    "url": "/Reactproject-socialNetwork/static/js/runtime-main.2feecffc.js"
+    "revision": "8b430448378576a08046",
+    "url": "/Reactproject-socialNetwork/static/js/runtime-main.6591446d.js"
   },
   {
     "revision": "97a48eefbb7b428ce8cbd741236d9ba4",
