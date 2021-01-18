@@ -1,4 +1,7 @@
-# Here the link to this social network website https://mikebronnikov.github.io/Reactproject-socialNetwork/                                                             
+# Here the link to this social network website https://mikebronnikov.github.io/Reactproject-socialNetwork/                                                       
+# Using email: free@samuraijs.com  and password: free to login
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
